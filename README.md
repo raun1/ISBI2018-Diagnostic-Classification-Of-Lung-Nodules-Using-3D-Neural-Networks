@@ -14,11 +14,11 @@ You have to register to get access to CUDNN
 
 
 
-The code in this repository consists of only the architecture of this paper -
+##The code in this repository consists of only the architecture of this paper -
 
- 
+``` 
 ![alt text](https://github.com/raun1/LIDC_2018_LUNG_CLASSIFICATION/blob/master/images/architecture.PNG)
-
+```
 ## Contribution
 
 All the code were written by the authors of this paper.
