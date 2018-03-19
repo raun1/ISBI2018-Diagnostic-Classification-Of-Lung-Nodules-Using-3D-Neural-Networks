@@ -9,13 +9,13 @@ Network Architecture for the ISBI_2018 paper : DIAGNOSTIC CLASSIFICATION OF LUNG
 * [CUDA](https://developer.nvidia.com/cuda-80-ga2-download-archive) - CUDA-8
 * [CUDNN](https://developer.nvidia.com/rdp/assets/cudnn_library-pdf-5prod) - CUDNN-5 You have to register to get access to CUDNN
 
-##The code in this repository consists of only the architecture of this paper -
+##Content
 ![alt text](https://github.com/raun1/LIDC_2018_LUNG_CLASSIFICATION/blob/master/images/architecture.PNG)
 
 ## Contribution
 
 All the code were written by the authors of this paper.
-Please contact (raun- rd31879@uga.edu) for guidance of a more complete implementation
+Please contact (raun- rd31879@uga.edu) for questions and queries
 
 ## Things to cite -
 If you use Keras please cite it as follows - 
