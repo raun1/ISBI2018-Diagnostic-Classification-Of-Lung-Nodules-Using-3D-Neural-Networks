@@ -7,7 +7,7 @@ Network Architecture for the ISBI_2018 paper : DIAGNOSTIC CLASSIFICATION OF LUNG
 * [Numpy](http://www.numpy.org/) - Numpy
 * [Sklearn](http://scikit-learn.org/stable/install.html) - Scipy/Sklearn/Scikit-learn
 * [CUDA](https://developer.nvidia.com/cuda-80-ga2-download-archive) - CUDA-8
-* [CUDNN](https://developer.nvidia.com/rdp/assets/cudnn_library-pdf-5prod) - CUDA-8
+* [CUDNN](https://developer.nvidia.com/rdp/assets/cudnn_library-pdf-5prod) - CUDNN-5 
 You have to register to get access to CUDNN
 
 
