@@ -11,9 +11,35 @@ Network Architecture for the ISBI_2018 paper : DIAGNOSTIC CLASSIFICATION OF LUNG
 
 
 ![alt text](https://github.com/raun1/LIDC_2018_LUNG_CLASSIFICATION/blob/master/images/architecture.PNG)
-###### The code in this repository provides only the code for this architecture. You may implement it as is, or convert it into modular structure
+```
+The code in this repository provides only the stand alone code for this architecture. You may implement it as is, or convert it into modular structure
 if you so wish. The dataset of LIDC-IDRI can obtained from the link above and the preprocessiong steps involved are mentioned in the paper. (Link to be provided soon)
+You have to provide the inputs.
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+The following lines provide a very simple example of how you may train the above network and obtain predictions.
+You may include validation set and callback function as demonstrated by the lines marked with ******** however please note we never used those
+In the following lines the network is named as "finalmodel"
+Apply early stopping if desired, for our experiments we didnt.
 
+xyz=keras.callbacks.EarlyStopping(monitor='val_loss', patience=4, verbose=1, mode='auto') <---------- early stopping, set patience to the number of epochs you want the network to continue before stopping,in case the performance starts to decline
+
+
+
+The inputs are X1_train,X2_train
+finalmodel.fit([X1_train,X2_train], [y_train,y_train,y_train,y_train,y_train,y_train,y_train,y_train,y_train],  
+                batch_size=8, #I used a batch size of 8, compared to batch size of 2-16, 8 gave the best result, higher batch size couldnt be supported on our GPU's
+                nb_epoch=150,
+                validation_data=([X2_validate,X3_validate],[y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate]), 
+                shuffle=True,
+                 callbacks=[xyz], *********
+                class_weight=class_weightt)
+You can obtain predicitions of the different outputs using the keras's model.predict function
+Set the index variable from 0-8 to obtain corresponding outputs with 8 being the final output
+predict_x=finalmodel.predict([X2_test,X3_test],batch_size=8)[index]
+```
 
 ## Contribution
 
