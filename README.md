@@ -25,7 +25,7 @@ You have to provide the inputs.
 ```
 ## Some guidelines to run the network (Please follow the paper for exact details)
 The following lines provide a very simple example of how you may train the network provided in this repository and obtain predictions.
-#### We are not providing the complete implementation but just the network architecture.
+#### We are not providing the complete implementation (Dataset/Preprocessing/Calculation of ROC/ACC/ etc etc) but just the core network architecture.
 You may include validation set and callback function as demonstrated, however 
 please note we never used those. In the following lines the network is referred as "finalmodel"
 You may apply early stopping if desired, but for our experiments we didnt.
