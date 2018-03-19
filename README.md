@@ -1,6 +1,15 @@
 # LIDC_2018_LUNG_CLASSIFICATION
 Network Architecture for the ISBI_2018 paper : DIAGNOSTIC CLASSIFICATION OF LUNG NODULES USING 3D NEURAL NETWORKS 
+## Built With/Things Needed to implement
 
+* [Python](https://www.python.org/downloads/) - Python-2 
+* [Keras](http://www.keras.io) - Deep Learning Framework used
+* [Numpy](http://www.numpy.org/) - Numpy
+
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 The code in this repository consists of only the architecture of this paper -
 
  
