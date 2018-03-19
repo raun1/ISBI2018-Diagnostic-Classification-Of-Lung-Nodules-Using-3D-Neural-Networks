@@ -16,8 +16,9 @@ The code in this repository provides only the stand alone code for this architec
 if you so wish. The dataset of LIDC-IDRI can obtained from the link above and the preprocessiong steps involved are mentioned in the paper. (Link to be provided soon)
 You have to provide the inputs.
 ```
-
-The following lines provide a very simple example of how you may train the network and obtain predictions.
+## Some guidelines to run the network
+The following lines provide a very simple example of how you may train the network provided in this repository and obtain predictions.
+### We are not providing the complete implementation but just the network architecture.
 You may include validation set and callback function as demonstrated by the lines marked with ******** however 
 please note we never used those. In the following lines the network is referred as "finalmodel"
 You may apply early stopping if desired, but for our experiments we didnt.
@@ -30,13 +31,16 @@ xyz=keras.callbacks.EarlyStopping(monitor='val_loss', patience=4, verbose=1, mod
 The inputs are X1_train,X2_train. Use Keras's model.fit function as follows to train
 ```
 finalmodel.fit([X1_train,X2_train], [y_train,y_train,y_train,y_train,y_train,y_train,y_train,y_train,y_train],  
-                batch_size=8, #I used a batch size of 8, compared to batch size of 2-16, 8 gave the best result, higher batch size couldnt be supported on our GPU's
+                batch_size=8, 
                 nb_epoch=150,
                 validation_data=([X2_validate,X3_validate],[y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate]), 
                 shuffle=True,
                  callbacks=[xyz], 
                 class_weight=class_weightt)
-#Once again please not we never used any calls backs or validation set in our experiments. 
+#Once again please note we never used any calls backs or validation set in our experiments.
+#I used a batch size of 8.
+#Compared to batch size of 2-16, 8 gave the best result, higher batch size couldnt be supported on our GPU's.
+#Please read the paper for more details (Link to be provided soon.)
 ```
 You can obtain predicitions of the different outputs using the keras's model.predict function
 Set the index variable from 0-8 to obtain corresponding outputs with 8 being the final output
@@ -47,7 +51,7 @@ predict_x=finalmodel.predict([X2_test,X3_test],batch_size=8)[index]
 ## Contribution
 
 All the code were written by the authors of this paper.
-Please contact (raun- rd31879@uga.edu) for questions and queries
+Please contact (raun- rd31879@uga.edu) for questions and queries and more details if you are having trouble with the complete implimentation. 
 
 ## Things to cite -
 If you use Keras please cite it as follows - 
