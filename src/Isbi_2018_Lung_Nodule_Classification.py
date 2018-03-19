@@ -24,8 +24,7 @@ from scipy.misc import imsave
 import numpy as np
 import time
 from sklearn import metrics
-import matplotlib
-from sklearn.utils import class_weight
+
     
 #Hyper parameters to be set - 
 #l2_Lambda - used for regularizing/penalizing parameters of the current layer
@@ -734,22 +733,11 @@ output=Dense(1,activation='sigmoid',name='output')(finalmerge)
 #We define our model with the inputs as mentioned before
 #We can obtain the individual result of the intermediate outputs using output1,2,3,.....10 and the final consolidated output from the final output branch
 #It is interesting to see how the different sections of the network optimize over time
-finalmodel = Model(inputs=[inputthree,inputthree1], outputs=[output1,output2,output4,output5,output7,output8,output9,output10,output])
-
+finalmodel = Model(inputs=[inputthree,inputthree1], outputs=[output1,output2,output4,output5,output7,output8,output9,output10,output])#This line assigns the model name to the model
+#The name "finalmodel" is the name to refer to this network while training/testing etc
 finalmodel.compile(optimizer='adadelta',loss='binary_crossentropy',metrics=['accuracy'])
 finalmodel.summary()
-#Apply early stopping if desired, for our experiments we didnt.
-#xyz=keras.callbacks.EarlyStopping(monitor='val_loss', patience=4, verbose=1, mode='auto')
 
-finalmodel.fit([X2_train,X3_train], [y_train,y_train,y_train,y_train,y_train,y_train,y_train,y_train,y_train],
-                batch_size=8, #I used a batch size of 8, compared to batch size of 2-16, 8 gave the best result, higher batch size couldnt be supported on our GPU's
-                nb_epoch=150,
-                #validation_data=([X2_validate,X3_validate],[y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate]),
-                shuffle=True,
-                #callbacks=[xyz],
-                class_weight=class_weightt)
-#You can obtain predicitions of the different outputs using the keras's model.predict function
-#Set the index variable from 0-8 to obtain corresponding outputs with 8 being the final output
-#predict_x=finalmodel.predict([X2_test,X3_test],batch_size=8)[index]
+
 
 #Thank You and please contact me at rd31879@uga.edu if you need more information.
