@@ -1,5 +1,6 @@
 # LIDC_2018_LUNG_CLASSIFICATION
 Network Architecture for the ISBI_2018 paper : DIAGNOSTIC CLASSIFICATION OF LUNG NODULES USING 3D NEURAL NETWORKS 
+Link to accepted paper will be provided soon
 ## Built With/Things Needed to implement experiments
 
 * [Python](https://www.python.org/downloads/) - Python-2 
