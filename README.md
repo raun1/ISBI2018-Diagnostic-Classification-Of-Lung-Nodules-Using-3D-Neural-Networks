@@ -16,10 +16,10 @@ The code in this repository provides only the stand alone code for this architec
 if you so wish. The dataset of LIDC-IDRI can obtained from the link above and the preprocessiong steps involved are mentioned in the paper. (Link to be provided soon)
 You have to provide the inputs.
 ```
-## Some guidelines to run the network
+## Some guidelines to run the network (Please follow the paper for exact details)
 The following lines provide a very simple example of how you may train the network provided in this repository and obtain predictions.
 ### We are not providing the complete implementation but just the network architecture.
-You may include validation set and callback function as demonstrated by the lines marked with ******** however 
+You may include validation set and callback function as demonstrated, however 
 please note we never used those. In the following lines the network is referred as "finalmodel"
 You may apply early stopping if desired, but for our experiments we didnt.
 
