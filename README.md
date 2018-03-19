@@ -1,6 +1,6 @@
 # LIDC_2018_LUNG_CLASSIFICATION
 Network Architecture for the ISBI_2018 paper : DIAGNOSTIC CLASSIFICATION OF LUNG NODULES USING 3D NEURAL NETWORKS 
-## Built With/Things Needed to implement
+## Built With/Things Needed to implement experiments
 
 * [Python](https://www.python.org/downloads/) - Python-2 
 * [Keras](http://www.keras.io) - Deep Learning Framework used
@@ -8,6 +8,11 @@ Network Architecture for the ISBI_2018 paper : DIAGNOSTIC CLASSIFICATION OF LUNG
 * [Sklearn](http://scikit-learn.org/stable/install.html) - Scipy/Sklearn/Scikit-learn
 * [CUDA](https://developer.nvidia.com/cuda-80-ga2-download-archive) - CUDA-8
 * [CUDNN](https://developer.nvidia.com/rdp/assets/cudnn_library-pdf-5prod) - CUDNN-5 You have to register to get access to CUDNN
+* [LIDC-IDRI](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI) - LIDC-IDRI-dataset download
+* [Itk-Snap](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP3) - To, view the CT images 
+
+
+
 
 
 ![alt text](https://github.com/raun1/LIDC_2018_LUNG_CLASSIFICATION/blob/master/images/architecture.PNG)
@@ -18,7 +23,7 @@ You have to provide the inputs.
 ```
 ## Some guidelines to run the network (Please follow the paper for exact details)
 The following lines provide a very simple example of how you may train the network provided in this repository and obtain predictions.
-### We are not providing the complete implementation but just the network architecture.
+#### We are not providing the complete implementation but just the network architecture.
 You may include validation set and callback function as demonstrated, however 
 please note we never used those. In the following lines the network is referred as "finalmodel"
 You may apply early stopping if desired, but for our experiments we didnt.
@@ -33,7 +38,7 @@ The inputs are X1_train,X2_train. Use Keras's model.fit function as follows to t
 finalmodel.fit([X1_train,X2_train], [y_train,y_train,y_train,y_train,y_train,y_train,y_train,y_train,y_train],  
                 batch_size=8, 
                 nb_epoch=150,
-                validation_data=([X2_validate,X3_validate],[y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate]), 
+                validation_data=([X1_validate,X2_validate],[y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate,y_validate]), 
                 shuffle=True,
                  callbacks=[xyz], 
                 class_weight=class_weightt)
@@ -43,9 +48,9 @@ finalmodel.fit([X1_train,X2_train], [y_train,y_train,y_train,y_train,y_train,y_t
 #Please read the paper for more details (Link to be provided soon.)
 ```
 You can obtain predicitions of the different outputs using the keras's model.predict function
-Set the index variable from 0-8 to obtain corresponding outputs with 8 being the final output
+####Set the index variable from 0-8 to obtain corresponding outputs with 8 being the final output
 ```
-predict_x=finalmodel.predict([X2_test,X3_test],batch_size=8)[index]
+predict_x=finalmodel.predict([X1_test,X2_test],batch_size=8)[index]
 ```
 
 ## Contribution
@@ -56,5 +61,6 @@ Please contact (raun- rd31879@uga.edu) for questions and queries and more detail
 ## Things to cite -
 If you use Keras please cite it as follows - 
 ###### @misc{chollet2015keras,title={Keras},author={Chollet, Fran\c{c}ois and others},year={2015},publisher={GitHub},howpublished={\url{https://github.com/keras-team/keras }},}
-### If you borrow the concept of multi_output only then cite our paper - To be declared.... (after April 2018)
+###### If you use LIDC dataset please cite according to this webpage - https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI#3a2715226d2841ee9ce0ba722f66232f, more details also mentioned in our paper
+###### If you borrow the concept of multi_output you might want to cite our paper - To be updated.... (after April 2018)
 
