@@ -1,4 +1,4 @@
-# LIDC_2018_LUNG_CLASSIFICATION (Under construction :))
+# Diagnostic Classification Of Lung Nodules Using 3D Neural Networks
 Network Architecture for the ISBI_2018 paper : DIAGNOSTIC CLASSIFICATION OF LUNG NODULES USING 3D NEURAL NETWORKS 
 To view the paper on Archive click the following https://arxiv.org/abs/1803.07192
 Visit My website - .... to be updated shortly for intuition, hints etc
