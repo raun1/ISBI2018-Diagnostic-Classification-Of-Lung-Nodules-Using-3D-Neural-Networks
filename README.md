@@ -20,7 +20,7 @@ Visit My website - .... to be updated shortly for intuition, hints etc
 ![alt text](https://github.com/raun1/LIDC_2018_LUNG_CLASSIFICATION/blob/master/images/architecture.PNG)
 ```
 The code in this repository provides only the stand alone code for this architecture. You may implement it as is, or convert it into modular structure
-if you so wish. The dataset of LIDC-IDRI can obtained from the link above and the preprocessiong steps involved are mentioned in the paper. (Link to be provided soon)
+if you so wish. The dataset of OASIS can obtained from the link above and the preprocessiong steps involved are mentioned in the paper. 
 You have to provide the inputs.
 ```
 ## Some guidelines to run the network (Please follow the paper for exact details)
