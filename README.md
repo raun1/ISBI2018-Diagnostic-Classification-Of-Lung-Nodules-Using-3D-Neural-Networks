@@ -60,10 +60,7 @@ predict_x=finalmodel.predict([X1_test,X2_test],batch_size=8)[index]
 All the code were written by the authors of this paper.
 Please contact (raun- rd31879@uga.edu) for questions and queries and more details if you are having trouble with the complete implimentation. 
 
-## Things to cite -
-
-###### If you use Keras please cite it as follows - @misc{chollet2015keras,title={Keras},author={Chollet, Fran\c{c}ois and others},year={2015},publisher={GitHub},howpublished={\url{https://github.com/keras-team/keras }},}
-###### If you use LIDC dataset please cite according to this webpage - https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI#3a2715226d2841ee9ce0ba722f66232f, more details also mentioned in our paper
+## Please cite our paper if this code or the idea of multioutput or if this study of pulmonary nodules helps your work
 ###### Our paper - 
 @inproceedings{dey2018diagnostic,
   title={Diagnostic classification of lung nodules using 3D neural networks},
